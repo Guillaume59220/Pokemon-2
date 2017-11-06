@@ -232,7 +232,6 @@ $personnes = array(
 ?>
 
 <h1>Combat pokécon</h1>
-<h2>C'est de la merde</h2>
 
 <?php
 
