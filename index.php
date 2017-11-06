@@ -250,8 +250,130 @@ $bulbizarre = [
 
 
     do{
+        /**
 
+ * Bienvenue dans ce module PHP
+
+ * Nous allons travailler à la réalisation d'un pokedex
+
+ */
+
+
+
+// Pikachu
+
+$attaque_pikachu = 15;
+
+$defense_pikachu = 10;
+
+$pv_pikachu = 25;
+
+
+
+// Bulbizarre
+
+$attaque_bulbizarre = 8;
+
+$defense_bulbizarre = 20;
+
+$pv_bulbizarre = 30;
+
+
+
+// pikachu attaque bulbizarre
+
+
+if ($attaque_pikachu >= $defense_bulbizarre) {
+
+  // L'attaque est supérieure à la défense : pikachu touche
+
+  $coup = $attaque_pikachu - $defense_bulbizarre + 1; // La valeur du coup est la différence entre l'attaque et la défense
+
+  $pv_bulbizarre -= $coup;
+
+
+} else {
+
+  // La défense est supérieure à l'attaque, pikachu prend la moitié du coup et la défense baisse un peu
+
+  $coup = ($defense_bulbizarre - $attaque_pikachu) / 2;
+
+  $pv_pikachu -= $coup;
+
+  $defense_bulbizarre -= 1;
+
+
+
+}
+
+
+
+if ($pv_bulbizarre <= 0) // S'il n'y a pas d'accolades après un if, seule la première instruction est filtrée par le if
+
+
+if ($pv_pikachu <= 0)
+
+
+
+
+// Et maintenant la contre-attaque : à vous de jouer !
+
+// bulbizarre attaque pikachu
+
+
+if ($attaque_bulbizarre >= $defense_pikachu) {
+
+  // L'attaque est supérieure à la défense : bulbizarre touche
+
+  $coup = $attaque_bulbizarre - $defense_pikachu + 1; // La valeur du coup est la différence entre l'attaque et la défense
+
+  $pv_pikachu -= $coup;
+
+
+} else {
+
+  // La défense est supérieure à l'attaque, bulbizarre prend la moitié du coup et la défense baisse un peu
+
+  $coup = ($defense_pikachu - $attaque_bulbizarre) / 2;
+
+  $pv_bulbizarre -= $coup;
+
+  $defense_pikachu -= 1;
+
+
+}
+
+
+
+if ($pv_bulbizarre <= 0) // S'il n'y a pas d'accolades après un if, seule la première instruction est filtrée par le if
+
+
+if ($pv_pikachu <= 0)
+
+
+
+
+
+// Ajoutons quelques baies pour restaurer des Points de Vies
+
+$pv_baie_rouge = 50;
+
+$pv_baie_noire = 30;
+
+
+
+// Bulbizarre mange une baie rouge
+
+// Pikachu mange une baie noire
     }while ($pikachu['pv'] > 0 && $bulbizarre['pv']  > 0);
+
+
+
+//    if ($pv_bulbizarre <= 0) {
+      //  stop
+  //  } elseif ($pv_bulbizarre > 0) { 
+       // continue
+    //} else (Stop it now)
 
 ?>
    </div>
