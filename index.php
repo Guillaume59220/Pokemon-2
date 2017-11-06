@@ -282,6 +282,7 @@ $pv_bulbizarre = 30;
 
 // pikachu attaque bulbizarre
 
+echo "<p>Pikachu attaque bulbizarre</p>";
 
 if ($attaque_pikachu >= $defense_bulbizarre) {
 
@@ -291,6 +292,7 @@ if ($attaque_pikachu >= $defense_bulbizarre) {
 
   $pv_bulbizarre -= $coup;
 
+  echo "<p>Bulbizarre perd $coup PV, il lui reste $pv_bulbizarre PV</p>";
 
 } else {
 
@@ -302,7 +304,9 @@ if ($attaque_pikachu >= $defense_bulbizarre) {
 
   $defense_bulbizarre -= 1;
 
+  echo "<p>Bulbizarre perd 1 Points de défense, il lui reste $defense_bulbizarre Points de défense</p>";
 
+  echo "<p>Pikachu râte son attaque ! Il perd $coup Points de vie, il lui reste $pv_pikachu Points de vie</p>";
 
 }
 
@@ -310,9 +314,11 @@ if ($attaque_pikachu >= $defense_bulbizarre) {
 
 if ($pv_bulbizarre <= 0) // S'il n'y a pas d'accolades après un if, seule la première instruction est filtrée par le if
 
+  echo "<p>Bulbizarre est KO !</p>";
 
 if ($pv_pikachu <= 0)
 
+  echo "<p>Pikachu est KO !</p>";
 
 
 
@@ -320,6 +326,7 @@ if ($pv_pikachu <= 0)
 
 // bulbizarre attaque pikachu
 
+echo "<p>Bulbizarre attaque Pikachu</p>";
 
 if ($attaque_bulbizarre >= $defense_pikachu) {
 
@@ -329,6 +336,7 @@ if ($attaque_bulbizarre >= $defense_pikachu) {
 
   $pv_pikachu -= $coup;
 
+  echo "<p>Pikachu perd $coup PV, il lui reste $pv_pikachu PV</p>";
 
 } else {
 
@@ -340,6 +348,9 @@ if ($attaque_bulbizarre >= $defense_pikachu) {
 
   $defense_pikachu -= 1;
 
+  echo "<p>Pikachu perd 1 Points de défense, il lui reste $defense_pikachu Points de défense</p>";
+
+  echo "<p>Bulbizarre râte son attaque ! Il perd $coup Points de vie, il lui reste $pv_bulbizarre Points de vie</p>";
 
 }
 
@@ -347,10 +358,11 @@ if ($attaque_bulbizarre >= $defense_pikachu) {
 
 if ($pv_bulbizarre <= 0) // S'il n'y a pas d'accolades après un if, seule la première instruction est filtrée par le if
 
+  echo "<p>Bulbizarre est KO !</p>";
 
 if ($pv_pikachu <= 0)
 
-
+  echo "<p>Pikachu est KO !</p>";
 
 
 
@@ -365,15 +377,7 @@ $pv_baie_noire = 30;
 // Bulbizarre mange une baie rouge
 
 // Pikachu mange une baie noire
-    }while ($pikachu['pv'] > 0 && $bulbizarre['pv']  > 0);
-
-
-
-//    if ($pv_bulbizarre <= 0) {
-      //  stop
-  //  } elseif ($pv_bulbizarre > 0) { 
-       // continue
-    //} else (Stop it now)
+    }while ($pv_pikachu['pv'] > 0 && $pv_bulbizarre['pv']  > 0);
 
 ?>
    </div>
