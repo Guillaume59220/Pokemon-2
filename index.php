@@ -13,10 +13,6 @@
 
    <h2>Le pokédex de la mort qui tue</h2>
 
-   <div class="image">
-        <img src="pokedex.jpg" alt="pokedex">
-   </div>
-
    <div class="php">
    <?php
 
@@ -147,6 +143,8 @@ $pv_baie_noire = 30;
 // Bulbizarre mange une baie rouge
 
 // Pikachu mange une baie noire
+
+
 
 ?>
    </div>
