@@ -146,88 +146,112 @@ $pv_baie_noire = 30;
 // Pikachu mange une baie noire
 
 
+?>
 
+<h1>Carte de visite</h1>
+<h2>On peut faire pareille en html</h2>
 
+<?php
 
 $personnes = array(
-
-    '0' => array(
-
-        'nom' => 'Dupont',
-
-        'prenom' => 'Pierre',
-
-        'email' => 'pierre.d@gmail.com',
-
-        'telephones' => array(
-
-            'fixe' => '03 00 00 00 00',
-
-            'portable' => '06 00 00 00 00'
-
-        )
-
-    ),
-
-    '1' => array(
-
-        'nom' => 'Dupont',
-
-        'prenom' => 'Jean',
-
-        'email' => 'jean.d@gmail.com',
-
-        'telephones' => array(
-
-            'fixe' => '03 00 00 00 00',
-
-            'portable' => '06 00 00 00 00'
-
-        )
-
-    ),
-
-    '2' => array(
-
-        'nom' => 'Dupont',
-
-        'prenom' => 'Marie',
-
-        'email' => 'marie.d@gmail.com',
-
-    ),
-
-  );
-
-
-
-  foreach($personnes as $personne) {
-
-    echo 'Nom : '.$personne['nom'].'<br/>';
-
-    echo 'Prénom : '.$personne['prenom'].'<br/>';
-
-    echo 'Email : '.$personne['email'].'<br/>';
-
-
-
-    // On vérifie l'existence de la cellule des téléphones
-
-    if (isset($personne['telephones'])) {
-
-        foreach($personne['telephones'] as $type => $telephone) {
-
-            echo 'Téléphone ' . $type . ' : '.$telephone.'<br/>';
-
+    
+        '0' => array(
+    
+            'nom' => 'Dupont',
+    
+            'prenom' => 'Pierre',
+    
+            'email' => 'pierre.d@gmail.com',
+    
+            'telephones' => array(
+    
+                'fixe' => '03 00 00 00 00',
+    
+                'portable' => '06 00 00 00 00'
+    
+            )
+    
+        ),
+    
+        '1' => array(
+    
+            'nom' => 'Dupont',
+    
+            'prenom' => 'Jean',
+    
+            'email' => 'jean.d@gmail.com',
+    
+            'telephones' => array(
+    
+                'fixe' => '03 00 00 00 00',
+    
+                'portable' => '06 00 00 00 00'
+    
+            )
+    
+        ),
+    
+        '2' => array(
+    
+            'nom' => 'Dupont',
+    
+            'prenom' => 'Marie',
+    
+            'email' => 'marie.d@gmail.com',
+    
+        ),
+    
+      );
+    
+    
+    
+      foreach($personnes as $personne) {
+    
+        echo 'Nom : '.$personne['nom'].'<br/>';
+    
+        echo 'Prénom : '.$personne['prenom'].'<br/>';
+    
+        echo 'Email : '.$personne['email'].'<br/>';
+    
+    
+    
+        // On vérifie l'existence de la cellule des téléphones
+    
+        if (isset($personne['telephones'])) {
+    
+            foreach($personne['telephones'] as $type => $telephone) {
+    
+                echo 'Téléphone ' . $type . ' : '.$telephone.'<br/>';
+    
+            }
+    
         }
+    
+      };
 
-    }
+?>
 
-  }
+<h1>Combat pokécon</h1>
+<h2>C'est de la merde</h2>
+
+<?php
+
+$pikachu = [
+    'pv' => 25,
+    'attaque' => 15,
+    'defense' => 10
+];
+
+$bulbizarre = [
+    'pv' => 30,
+    'attaque' => 0,
+    'defense' => 25
+];
 
 
+    do{
 
-
+    }while ($pikachu['pv'] > 0 && $bulbizarre['pv']  > 0);
 
 ?>
    </div>
